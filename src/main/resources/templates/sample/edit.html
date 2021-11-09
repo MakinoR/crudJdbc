@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Sample</title>
+</head>
+<body>
+<h2>編集フォーム</h2>
+<form method="post" action="#" th:action="@{'/sample/edit/' + ${testForm.id}}" th:object="${testForm}">
+    <label for="title">タイトル</label>
+    <input type="text" id="title" name="title" th:value="${testForm.title}"><br>
+    <label for="content">内容</label>
+    <input type="text" id="content" name="content" th:value="${testForm.content}"><br>
+    <input type="submit" value="送信">
+</form>
+<div><a href="#" th:href="@{/sample}">トップページ</a></div>
+</body>
+</html>
